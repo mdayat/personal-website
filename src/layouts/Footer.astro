@@ -1,19 +1,23 @@
 ---
+import { Image } from "astro:assets";
+import github from "../images/github.png";
+import linkedin from "../images/linkedin.png";
+
 const currentYear = new Date().getFullYear();
 ---
 
 <footer class="bg-neutral">
   <div
-    class="footer text-neutral-content base-padding max-width justify-center items-center gap-y-8 py-4 md:justify-between"
+    class="base-padding lock-width footer text-neutral-content justify-center items-center gap-y-6 py-4 md:justify-between"
   >
-    <p class="font-semibold text-base text-center md:text-left">
+    <p class="text-base text-center md:text-left">
       &copy; {currentYear} Muhammad Nur Hidayat. All Rights Reserved
     </p>
 
     <ul class="flex justify-between items-center gap-x-4 mx-auto md:mx-0">
       <li>
         <a href="https://github.com/mdayat" target="_blank" rel="noopener">
-          <img src="/github.png" alt="GitHub Icon" width="32" />
+          <Image src={github} alt="GitHub Icon" width="32" />
         </a>
       </li>
 
@@ -23,7 +27,7 @@ const currentYear = new Date().getFullYear();
           target="_blank"
           rel="noopener"
         >
-          <img src="/linkedin.png" alt="LinkedIn Icon" width="32" />
+          <Image src={linkedin} alt="LinkedIn Icon" width="32" />
         </a>
       </li>
 
@@ -64,14 +68,3 @@ const currentYear = new Date().getFullYear();
     </ul>
   </div>
 </footer>
-
-<style>
-  .base-padding {
-    @apply px-8 md:px-16 lg:px-20 xl:px-24 2xl:px-28;
-  }
-
-  .max-width {
-    max-width: calc(1536px - 112px);
-    margin: 0 auto;
-  }
-</style>
