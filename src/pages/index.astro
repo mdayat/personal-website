@@ -11,10 +11,14 @@ const metaDesc = `Muhammad Nur Hidayat is a self-taught software engineer who sp
 
 <script>
   const articleEl = document.getElementById("about-me") as HTMLElement;
-  const observerCallback = (entries: IntersectionObserverEntry[]) => {
+  const observerCallback = (
+    entries: IntersectionObserverEntry[],
+    observer: IntersectionObserver,
+  ) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        articleEl.classList.add("animate__animated", "animate__slideInUp");
+        articleEl.classList.add("animate__animated", "animate__fadeInUp");
+        observer.unobserve(articleEl);
       }
     });
   };

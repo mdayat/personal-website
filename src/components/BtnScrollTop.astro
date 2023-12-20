@@ -1,7 +1,40 @@
+<script>
+  const mainEl = document.getElementById("main-content") as HTMLElement;
+  const btnScrollTop = document.getElementById(
+    "scrollToTop",
+  ) as HTMLButtonElement;
+
+  const observerCallback = (
+    entries: IntersectionObserverEntry[],
+    observer: IntersectionObserver,
+  ) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        btnScrollTop.removeAttribute("aria-hidden");
+        btnScrollTop.classList.remove("invisible");
+        btnScrollTop.classList.add("animate__animated", "animate__fadeInUp");
+
+        btnScrollTop.addEventListener("click", () => {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
+
+        observer.unobserve(mainEl);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, {
+    threshold: 0,
+  });
+  observer.observe(mainEl);
+</script>
+
 <button
+  aria-hidden="true"
   id="scrollToTop"
   type="button"
-  class="fixed bottom-4 right-4 lg:bottom-6 lg:right-6 xl:bottom-8 xl:right-8"
+  class="invisible fixed bottom-4 right-4 lg:bottom-6 lg:right-6 xl:bottom-8 xl:right-8"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -14,14 +47,3 @@
     </path>
   </svg>
 </button>
-
-<script>
-  const btnScrollTop = document.getElementById(
-    "scrollToTop",
-  ) as HTMLButtonElement;
-
-  btnScrollTop.addEventListener("click", () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  });
-</script>
