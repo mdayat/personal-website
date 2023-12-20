@@ -1,13 +1,51 @@
 ---
+import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
 import Footer from "../layouts/Footer.astro";
 import Hero from "../layouts/Hero.astro";
+import avatar from "../images/avatar.png";
+
+const metaTitle = "Muhammad Nur Hidayat";
+const metaDesc = `Muhammad Nur Hidayat is a self-taught software engineer who specializes in web development, with a particular focus on security, SEO, and ensuring a good user experience`;
 ---
 
-<Base title="Muhammad Nur Hidayat" description="Whatever">
+<Base title={metaTitle} description={metaDesc}>
   <Hero slot="hero" />
 
-  <main id="main-content"></main>
+  <main class="base-padding lock-width my-20">
+    <article id="main-content">
+      <h1
+        aria-label="Who is Muhammad Nur Hidayat?"
+        class="font-semibold text-2xl text-center mb-8 lg:text-3xl lg:mb-10 xl:text-4xl xl:mb-12"
+      >
+        About Me
+      </h1>
+
+      <div class="lg:grid lg:grid-cols-2 lg:place-items-center">
+        <Image
+          src={avatar}
+          alt=""
+          class="w-52 mx-auto mb-8 lg:order-2 lg:w-60 xl:w-64"
+        />
+
+        <div class="lg:order-1 lg:max-w-lg">
+          <p class="mb-4">
+            Hello, I'm Muhammad Nur Hidayat, a self-taught software engineer who
+            specializes in web development, with a particular focus on security,
+            SEO, and ensuring a good user experience. I have one year of
+            experience in front-end web development, including collaboration
+            within teams.
+          </p>
+
+          <p>
+            Currently, I am broadening my expertise in back-end development
+            using the Go programming language. My interest in security made me
+            commit to learning and building robust server-side solutions.
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
 
   <Footer slot="footer" />
 </Base>
