@@ -8,6 +8,33 @@ import Svelte from "./icons/Svelte.astro";
 import Prisma from "./icons/Prisma.astro";
 ---
 
+<script>
+  if (window.innerWidth < 1024) {
+    const UListEl = document.getElementById("used-tech") as HTMLUListElement;
+    const observerCallback = (
+      entries: IntersectionObserverEntry[],
+      observer: IntersectionObserver,
+    ) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const LiEl = entry.target as HTMLLIElement;
+          LiEl.classList.add("animate__animated", "animate__fadeInUp");
+          observer.unobserve(LiEl);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0,
+    });
+
+    for (let i = 0; i < UListEl.children.length; i++) {
+      const LiEl = UListEl.children[i] as HTMLLIElement;
+      observer.observe(LiEl);
+    }
+  }
+</script>
+
 <article class="my-20">
   <h2
     class="font-semibold text-2xl text-center mb-8 lg:text-3xl lg:mb-10 xl:text-4xl xl:mb-12"
@@ -15,7 +42,10 @@ import Prisma from "./icons/Prisma.astro";
     Technologies That I Use
   </h2>
 
-  <ul class="flex flex-col gap-y-8 justify-between items-center lg:flex-row">
+  <ul
+    id="used-tech"
+    class="flex flex-col gap-y-8 justify-between items-center lg:flex-row"
+  >
     <li>
       <a href="https://svelte.dev/" target="_blank" rel="noopener">
         <Svelte />

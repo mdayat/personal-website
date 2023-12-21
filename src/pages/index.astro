@@ -10,31 +10,11 @@ const metaTitle = "Muhammad Nur Hidayat";
 const metaDesc = `Muhammad Nur Hidayat is a self-taught software engineer who specializes in web development, with a particular focus on security, SEO, and ensuring a good user experience`;
 ---
 
-<script>
-  const articleEl = document.getElementById("about-me") as HTMLElement;
-  const observerCallback = (
-    entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver,
-  ) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        articleEl.classList.add("animate__animated", "animate__fadeInUp");
-        observer.unobserve(articleEl);
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(observerCallback, {
-    threshold: 0,
-  });
-  observer.observe(articleEl);
-</script>
-
 <Base title={metaTitle} description={metaDesc}>
   <Hero slot="hero" />
 
   <main id="main-content" class="base-padding lock-width my-20">
-    <article id="about-me">
+    <article>
       <h1
         aria-label="Who is Muhammad Nur Hidayat?"
         class="font-semibold text-2xl text-center mb-8 lg:text-3xl lg:mb-10 xl:text-4xl xl:mb-12"
