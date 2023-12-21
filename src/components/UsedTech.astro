@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import nodejs from "../images/nodejs.png";
+import react from "../images/react.png";
+import Tailwind from "./icons/Tailwind.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import Svelte from "./icons/Svelte.astro";
+import Prisma from "./icons/Prisma.astro";
+---
+
+<article class="my-20">
+  <h2
+    class="font-semibold text-2xl text-center mb-8 lg:text-3xl lg:mb-10 xl:text-4xl xl:mb-12"
+  >
+    Technologies That I Use
+  </h2>
+
+  <ul class="flex flex-col gap-y-8 justify-between items-center lg:flex-row">
+    <li>
+      <a href="https://svelte.dev/" target="_blank" rel="noopener">
+        <Svelte />
+      </a>
+    </li>
+
+    <li>
+      <a href="https://tailwindcss.com/" target="_blank" rel="noopener">
+        <Tailwind />
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">
+        <TypeScript />
+      </a>
+    </li>
+
+    <li>
+      <a href="https://nodejs.org/en" target="_blank" rel="noopener">
+        <Image src={nodejs} alt="" class="w-24" />
+      </a>
+    </li>
+
+    <li>
+      <a href="https://react.dev/" target="_blank" rel="noopener">
+        <Image src={react} alt="" class="w-11" />
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.prisma.io/" target="_blank" rel="noopener">
+        <Prisma />
+      </a>
+    </li>
+  </ul>
+</article>
