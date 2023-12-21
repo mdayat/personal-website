@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import frontEndExpertCertificate from "../images/front-end-expert.jpg";
+---
+
+<section class="my-28">
+  <h2
+    class="font-semibold text-2xl text-center mb-8 lg:text-3xl lg:mb-10 xl:text-4xl xl:mb-12"
+  >
+    Training and Certifications
+  </h2>
+
+  <ul class="w-fit mb-8 lg:mx-auto lg:mb-10 xl:mb-12">
+    <li>
+      <button
+        type="button"
+        class="font-semibold border-b-2 border-primary pb-2"
+      >
+        Front-End Web
+      </button>
+    </li>
+  </ul>
+
+  <article class="lg:grid lg:grid-cols-2 lg:place-items-center">
+    <a
+      href="https://www.dicoding.com/certificates/6RPN4NQR8X2M"
+      target="_blank"
+      rel="noopener"
+      class="block mb-8 lg:mb-0"
+    >
+      <Image
+        src={frontEndExpertCertificate}
+        alt="Sertifikasi Front-End Web Developer Expert"
+        class="w-72 mx-auto lg:mx-0 lg:w-80 xl:w-96"
+      />
+    </a>
+
+    <div class="lg:max-w-lg">
+      <p class="mb-4">
+        <a
+          href="https://www.dicoding.com/academies/219"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-semibold"
+        >
+          "Menjadi Front-End Web Developer Expert"
+        </a> is a course offered by
+        <a
+          href="https://www.dicoding.com/"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-semibold"
+        >
+          Dicoding
+        </a> that teaches how to create websites in accordance with industry
+        standards, emphasizing aspects such as responsibility, accessibility,
+        security, performance, and robustness.
+      </p>
+
+      <p>
+        This certification marks the final stage of one of Dicoding's learning
+        paths: becoming a
+        <a
+          href="https://www.dicoding.com/learningpaths/22"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-semibold"
+        >
+          Front-End Web Developer</a
+        >.
+      </p>
+    </div>
+  </article>
+</section>

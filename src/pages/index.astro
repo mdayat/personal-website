@@ -5,6 +5,7 @@ import Footer from "../layouts/Footer.astro";
 import Hero from "../layouts/Hero.astro";
 import avatar from "../images/avatar.png";
 import UsedTech from "../components/UsedTech.astro";
+import Certifications from "../components/Certifications.astro";
 
 const metaTitle = "Muhammad Nur Hidayat";
 const metaDesc = `Muhammad Nur Hidayat is a self-taught software engineer who specializes in web development, with a particular focus on security, SEO, and ensuring a good user experience`;
@@ -13,8 +14,8 @@ const metaDesc = `Muhammad Nur Hidayat is a self-taught software engineer who sp
 <Base title={metaTitle} description={metaDesc}>
   <Hero slot="hero" />
 
-  <main id="main-content" class="base-padding lock-width my-20">
-    <article>
+  <main id="main-content" class="base-padding lock-width mt-28">
+    <article class="mb-28">
       <h1
         aria-label="Who is Muhammad Nur Hidayat?"
         class="font-semibold text-2xl text-center mb-8 lg:text-3xl lg:mb-10 xl:text-4xl xl:mb-12"
@@ -26,7 +27,7 @@ const metaDesc = `Muhammad Nur Hidayat is a self-taught software engineer who sp
         <Image
           src={avatar}
           alt=""
-          class="w-52 mx-auto mb-8 lg:order-2 lg:w-60 xl:w-64"
+          class="w-52 mx-auto mb-8 lg:order-2 lg:mx-0 lg:w-60 xl:w-64"
         />
 
         <div class="lg:order-1 lg:max-w-lg">
@@ -54,7 +55,10 @@ const metaDesc = `Muhammad Nur Hidayat is a self-taught software engineer who sp
       </div>
     </article>
 
+    <hr class="border-none h-1 bg-neutral" />
     <UsedTech />
+    <hr class="border-none h-1 bg-neutral" />
+    <Certifications />
   </main>
 
   <Footer slot="footer" />
