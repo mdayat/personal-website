@@ -1,13 +1,6 @@
 ---
 import "animate.css";
 import BtnScrollTop from "../components/BtnScrollTop.astro";
-
-interface Props {
-  title: string;
-  description: string;
-}
-
-const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,11 +10,47 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src 'self'; img-src 'self'; base-uri 'self'; form-action 'self'; font-src 'self' https://fonts.gstatic.com"
+      content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src 'self'; img-src 'self' https://res.cloudinary.com; base-uri 'self'; form-action 'self'; font-src 'self' https://fonts.gstatic.com"
     />
+
     <meta name="author" content="Muhammad Nur Hidayat" />
-    <meta name="description" content={description} />
+    <meta
+      name="description"
+      content="Muhammad Nur Hidayat is a self-taught software engineer who specializes in web development, with a particular focus on security, SEO, and ensuring a good user experience"
+    />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- General Open Graph -->
+    <meta property="og:title" content="Muhammad Nur Hidayat" />
+    <meta
+      property="og:description"
+      content="Muhammad Nur Hidayat is a self-taught software engineer who specializes in web development, with a particular focus on security, SEO, and ensuring a good user experience"
+    />
+    <meta
+      property="og:url"
+      content="https://personal-website-mdayat.vercel.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dtvd4w0lz/image/upload/f_auto,q_auto/tpwvrqcsj4gqh4dh5bc3"
+    />
+    <meta property="og:image:alt" content="" />
+
+    <!-- Twitter Open Graph -->
+    <meta name="twitter:title" content="Muhammad Nur Hidayat" />
+    <meta
+      name="twitter:description"
+      content="Muhammad Nur Hidayat is a self-taught software engineer who specializes in web development, with a particular focus on security, SEO, and ensuring a good user experience"
+    />
+    <meta
+      name="twitter:url"
+      content="https://personal-website-mdayat.vercel.app/"
+    />
+    <meta
+      name="twitter:image:src"
+      content="https://res.cloudinary.com/dtvd4w0lz/image/upload/f_auto,q_auto/tpwvrqcsj4gqh4dh5bc3"
+    />
+    <meta name="twitter:image:alt" content="" />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -32,7 +61,7 @@ const { title, description } = Astro.props;
       rel="stylesheet"
     />
 
-    <title>{title}</title>
+    <title>Muhammad Nur Hidayat</title>
   </head>
 
   <body class="font-poppins">
