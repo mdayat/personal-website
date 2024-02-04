@@ -1,28 +1,29 @@
 ---
 import { Image } from "astro:assets";
+import ArrowUpRight from "./icons/ArrowUpRight.astro";
 import troisPetCare from "../images/portfolio/troispetcare.jpg";
+import vipEngineering from "../images/portfolio/vipengineering.jpg";
+import golekMangan from "../images/portfolio/golekmangan.jpg";
 ---
 
-<section class="my-28">
+<section class="my-28 flex flex-wrap justify-center gap-8">
   <h2
-    class="font-semibold text-2xl text-center mb-12 lg:text-3xl lg:mb-16 xl:text-4xl xl:mb-20"
+    class="basis-full font-semibold text-2xl text-center mb-12 lg:text-3xl lg:mb-16 xl:text-4xl xl:mb-20"
   >
-    Portfolio
+    My Portfolios
   </h2>
 
-  <article class="bg-neutral max-w-sm rounded-lg mx-auto p-6">
-    <Image
-      src={troisPetCare}
-      alt="Halaman Utama Trois Pet Care"
-      class="rounded-lg mb-6"
-    />
+  <article class="bg-neutral max-w-sm max-h-[512px] rounded-xl overflow-hidden">
+    <a href="https://www.troispetcare.com/" target="_blank" rel="noopener">
+      <Image src={troisPetCare} alt="Halaman Utama Trois Pet Care" />
+    </a>
 
-    <div>
-      <h3 class="font-bold text-2xl mb-4">Trois Pet Care</h3>
+    <div class="m-6">
+      <h3 class="font-bold text-xl mb-3">Trois Pet Care</h3>
 
-      <p class="mb-3">
+      <p class="mb-2">
         Trois Pet Care is a veterinary clinic and pet shop that provides
-        services, such as veterinary practice, grooming, and animal needs.
+        services, such as veterinary practice, and grooming.
       </p>
 
       <p>
@@ -42,27 +43,72 @@ import troisPetCare from "../images/portfolio/troispetcare.jpg";
           class="text-primary font-bold"
         >
           Notion API
-        </a> which serves as a Content Management System (blog).
+        </a> which serves as a CMS (blog).
+      </p>
+    </div>
+  </article>
+
+  <article class="bg-neutral max-w-sm max-h-[512px] rounded-xl overflow-hidden">
+    <a href="https://golek-mangan.vercel.app/" target="_blank" rel="noopener">
+      <Image src={golekMangan} alt="Halaman Utama Golek Mangan" />
+    </a>
+
+    <div class="m-6">
+      <h3 class="font-bold text-xl mb-3">Golek Mangan</h3>
+
+      <p class="mb-2">
+        This was one of my projects when i was in Dicoding Bootcamp created
+        using plain HTML, CSS, and JS without any front-end framework.
       </p>
 
-      <a
-        href="https://www.troispetcare.com/"
-        target="_blank"
-        rel="noopener"
-        class="btn btn-primary btn-wide rounded-badge flex mx-auto mt-8"
-      >
-        Visit
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          class="fill-primary-content w-4"
+      <p>
+        Additionally, this app utilizes
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-bold"
         >
-          <path
-            d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
-          >
-          </path>
-        </svg>
-      </a>
+          PWA
+        </a>
+        to give a mobile-app-like experience with the help of
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-bold"
+        >
+          IndexedDB
+        </a>.
+      </p>
+    </div>
+  </article>
+
+  <article class="bg-neutral max-w-sm max-h-[512px] rounded-xl overflow-hidden">
+    <a href="https://vipengineering.co.id/" target="_blank" rel="noopener">
+      <Image src={vipEngineering} alt="Halaman Utama VIP Engineering" />
+    </a>
+
+    <div class="m-6">
+      <h3 class="font-bold text-xl mb-3">VIP Engineering</h3>
+
+      <p class="mb-2">
+        VIPEngineering is a service provider that provides technical services
+        related to chemical processes, energy, water treatment, wastewater
+        treatment, and process equipment.
+      </p>
+
+      <p>
+        This project was created using
+        <a
+          href="https://nextjs.org/"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-bold"
+        >
+          next.js
+        </a>.
+      </p>
     </div>
   </article>
 </section>
