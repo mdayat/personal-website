@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import ArrowUpRight from "./icons/ArrowUpRight.astro";
+import komunal from "../images/portfolio/komunal.png";
 import troisPetCare from "../images/portfolio/troispetcare.jpg";
 import vipEngineering from "../images/portfolio/vipengineering.jpg";
 import golekMangan from "../images/portfolio/golekmangan.jpg";
@@ -12,6 +12,64 @@ import golekMangan from "../images/portfolio/golekmangan.jpg";
   >
     My Portfolios
   </h2>
+
+  <article class="bg-neutral max-w-sm max-h-[512px] rounded-xl overflow-hidden">
+    <a href="https://komunal-tau.vercel.app/" target="_blank" rel="noopener">
+      <Image src={komunal} alt="Komunal (Komunikasi Massal)" />
+    </a>
+
+    <div class="m-6">
+      <h3 class="font-bold text-xl mb-3">Komunal</h3>
+
+      <p class="mb-2">
+        Komunal (Komunikasi Massal) is a discussion forum app that is also a
+        final project of <a
+          href="https://www.dicoding.com/academies/418"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-semibold"
+        >
+          Menjadi React Web Developer Expert
+        </a> course.
+      </p>
+
+      <p>
+        This project was created using
+        <a
+          href="https://nextjs.org/"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-bold"
+        >
+          Next.js</a
+        >,
+        <a
+          href="https://redux.js.org/"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-bold"
+        >
+          Redux</a
+        >,
+        <a
+          href="https://mui.com/material-ui/"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-bold"
+        >
+          Material UI</a
+        >, and
+        <a
+          href="https://storybook.js.org/"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-bold"
+        >
+          Storybook</a
+        >.
+      </p>
+    </div>
+  </article>
 
   <article class="bg-neutral max-w-sm max-h-[512px] rounded-xl overflow-hidden">
     <a href="https://www.troispetcare.com/" target="_blank" rel="noopener">
@@ -42,8 +100,8 @@ import golekMangan from "../images/portfolio/golekmangan.jpg";
           rel="noopener"
           class="text-primary font-bold"
         >
-          Notion API
-        </a> which serves as a CMS (blog).
+          Notion API</a
+        >, which serves as a CMS (blog).
       </p>
     </div>
   </article>
@@ -78,8 +136,8 @@ import golekMangan from "../images/portfolio/golekmangan.jpg";
           rel="noopener"
           class="text-primary font-bold"
         >
-          IndexedDB
-        </a>.
+          IndexedDB</a
+        >.
       </p>
     </div>
   </article>
@@ -106,8 +164,8 @@ import golekMangan from "../images/portfolio/golekmangan.jpg";
           rel="noopener"
           class="text-primary font-bold"
         >
-          next.js
-        </a>.
+          next.js</a
+        >.
       </p>
     </div>
   </article>

@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import frontendExpertCertificate from "../images/certification/front-end-expert.jpg";
+import reactExpertCertificate from "../images/certification/react-expert.jpg";
 import bootcampCertificate from "../images/certification/dicoding-bootcamp.jpg";
-import ArrowUpRight from "./icons/ArrowUpRight.astro";
 ---
 
 <section class="my-28">
@@ -11,6 +11,58 @@ import ArrowUpRight from "./icons/ArrowUpRight.astro";
   >
     Training and Certifications
   </h2>
+
+  <article class="mb-20 lg:mb-28 lg:grid lg:grid-cols-2 lg:place-items-center">
+    <a
+      href="https://www.dicoding.com/certificates/N9ZOOJ9NYZG5"
+      target="_blank"
+      rel="noopener"
+      class="border-8 border-primary box-border block w-72 mx-auto lg:mx-0 lg:order-2 lg:w-80 xl:w-96 mb-6 lg:mb-0"
+    >
+      <Image
+        src={reactExpertCertificate}
+        alt="Menjadi React Web Developer Expert Certification"
+        class="bg-base-300 text-base-content w-full h-full object-cover object-center"
+      />
+    </a>
+
+    <div class="lg:order-1 lg:max-w-lg">
+      <p class="mb-4">
+        <a
+          href="https://www.dicoding.com/academies/418"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-semibold"
+        >
+          Menjadi React Web Developer Expert
+        </a>
+        is a course offered by
+        <a
+          href="https://www.dicoding.com/"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-semibold"
+        >
+          Dicoding
+        </a> that teaches how React works—such as component life cycle and its re-rendering
+        process, how Redux works under the hood, when to use Redux, and when not
+        to use Redux.
+      </p>
+
+      <p>
+        This course marks the final stage of one of Dicoding's learning paths:
+        becoming a
+        <a
+          href="https://www.dicoding.com/learningpaths/58"
+          target="_blank"
+          rel="noopener"
+          class="text-primary font-semibold"
+        >
+          React Developer</a
+        >.
+      </p>
+    </div>
+  </article>
 
   <article class="mb-20 lg:mb-28 lg:grid lg:grid-cols-2 lg:place-items-center">
     <a
@@ -78,7 +130,7 @@ import ArrowUpRight from "./icons/ArrowUpRight.astro";
           rel="noopener"
           class="text-primary font-semibold"
         >
-          "Menjadi Front-End Web Developer Expert"
+          Menjadi Front-End Web Developer Expert
         </a> is a course offered by
         <a
           href="https://www.dicoding.com/"
@@ -93,8 +145,8 @@ import ArrowUpRight from "./icons/ArrowUpRight.astro";
       </p>
 
       <p>
-        This certification marks the final stage of one of Dicoding's learning
-        paths: becoming a
+        This course marks the final stage of one of Dicoding's learning paths:
+        becoming a
         <a
           href="https://www.dicoding.com/learningpaths/22"
           target="_blank"
@@ -104,16 +156,6 @@ import ArrowUpRight from "./icons/ArrowUpRight.astro";
           Front-End Web Developer</a
         >.
       </p>
-
-      <a
-        href="https://github.com/mdayat/golek-mangan"
-        target="_blank"
-        rel="noopener"
-        class="btn btn-primary rounded-badge mt-6"
-      >
-        Repository
-        <ArrowUpRight />
-      </a>
     </div>
   </article>
 </section>
